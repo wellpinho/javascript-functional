@@ -1,7 +1,15 @@
 // anonimous function
+// IIFE = Immediately Invoked Function Expression
 (function (a, b, c) {
-  return a + b + c
-})
+  console.log(a + b + c)
+})(1,2,3);
+
+(function () {
+  const x = 300
+  console.log(x)
+})();
+
+(() => console.log('Arrow #02'))();
 
 // function expression
 const sum = function (a, b) {
