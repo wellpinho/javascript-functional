@@ -23,3 +23,15 @@ const itemFilter2 = carrinho
 
 console.log(itemFilter)
 console.log(itemFilter2)
+
+Array.prototype.meuFilter = function(fn) {
+  const newArr = []
+
+  for (let i = 0; i < this.length; i++) {
+    if (fn (this[i], i, this)) {
+      newArr.push(this[i])
+    }
+  }
+
+  return newArr
+}
